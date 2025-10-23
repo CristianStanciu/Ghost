@@ -17,7 +17,7 @@
 
     <div class="flex items-center justify-between">
         <div class="pe-all">
-            <GhBasicDropdown @horizontalPosition="left" @verticalPosition="above" @calculatePosition={{this.userDropdownPosition}} as |dropdown|>
+            <GhBasicDropdown @horizontalPosition="left" @verticalPosition="above" @calculatePosition={{this.userDropdownPosition}} @destination={{popup-destination}} as |dropdown|>
                 <dropdown.Trigger class="outline-0 pointer">
                     <div class="flex-auto flex items-center">
                         <div class="gh-user-avatar relative" style={{background-image-style this.session.user.profileImageUrl}}>

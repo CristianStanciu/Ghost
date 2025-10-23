@@ -17,6 +17,7 @@
                 @triggerComponent={{component "gh-power-select/trigger"}}
                 @triggerClass="gh-publish-newsletter-trigger"
                 @dropdownClass="gh-publish-newsletter-dropdown"
+                @destination={{popup-destination}}
                 as |newsletter|
             >
                 <span data-test-select-option={{newsletter.name}}>{{newsletter.name}}</span>

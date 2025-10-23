@@ -1,4 +1,4 @@
-<GhBasicDropdown @verticalPosition="below" as |dd|>
+<GhBasicDropdown @verticalPosition="below" @destination={{popup-destination}} as |dd|>
     <dd.Trigger class="gh-btn gh-btn-icon gh-btn-action-icon" data-test-id="filter-events-button">
         <span class={{if @excludedEvents "gh-btn-label-green"}}>
             {{svg-jar "filter"}}

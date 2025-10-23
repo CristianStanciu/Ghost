@@ -15,6 +15,7 @@
         @triggerComponent={{component "gh-input-with-select/trigger"}}
         @placeholder="Search members"
         @extra={{hash showSearchMessage=false}}
+        @destination={{popup-destination}}
         as |member|
     >
         {{#if member.name}}<strong>{{member.name}}</strong>{{/if}}

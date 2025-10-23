@@ -38,6 +38,7 @@
                             @triggerClass="gh-contentfilter-menu-trigger"
                             @dropdownClass="gh-contentfilter-menu-dropdown"
                             @matchTriggerWidth={{false}}
+                            @destination={{popup-destination}}
                             as |option|
                         >
                             {{#if option.name}}{{option.name}}{{else}}<span class="red">Unknown option</span>{{/if}}

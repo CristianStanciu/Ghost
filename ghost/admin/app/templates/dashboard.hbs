@@ -9,7 +9,7 @@
                 <div class="gh-dashboard-select">
                     <div {{did-insert this.loadMentions}}>
                         {{#if (feature 'webmentions')}}
-                        <GhBasicDropdown @horizontalPosition="right" @verticalPosition="below" @onOpen={{this.markMentionsRead}} as |dropdown|>
+                        <GhBasicDropdown @horizontalPosition="right" @verticalPosition="below" @onOpen={{this.markMentionsRead}} @destination={{popup-destination}} as |dropdown|>
                             <dropdown.Trigger class="outline-0 pointer">
                                 <button type="button" class="gh-dashboard-mentions-icon">
                                     {{#if this.hasNewMentions}}
@@ -72,6 +72,7 @@
                         @dropdownClass="gh-contentfilter-menu-dropdown is-narrow"
                         @matchTriggerWidth={{false}}
                         @horizontalPosition="right"
+                        @destination={{popup-destination}}
                         as |option|
                     >
                         {{#if option.name}}{{option.name}}{{else}}<span class="red">Unknown option</span>{{/if}}

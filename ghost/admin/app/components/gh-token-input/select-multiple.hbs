@@ -1,6 +1,7 @@
 {{!--
     NOTE: changes from ember-power-select template...
     - `extra` has our custom drag-tracking actions assigned to it
+    - `destination` is set to the popup destination if not provided
 --}}
 <PowerSelect
     @triggerRole={{@triggerRole}}
@@ -15,7 +16,7 @@
     @calculatePosition={{@calculatePosition}}
     @closeOnSelect={{@closeOnSelect}}
     @defaultHighlighted={{@defaultHighlighted}}
-    @destination={{@destination}}
+    @destination={{unless @renderInPlace (or @destination (popup-destination))}}
     @disabled={{@disabled}}
     @dropdownClass={{@dropdownClass}}
     @extra={{assign @extra (hash

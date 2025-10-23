@@ -6,7 +6,7 @@
     @triggerClass="gh-resource-select-trigger"
     @dropdownClass="gh-resource-select-dropdown"
     @placeholder={{this.placeholderText}}
-    @renderInPlace={{this.renderInPlace}}
+    @renderInPlace={{if this.renderInPlace true (popup-destination)}}
     @disabled={{or @disabled this.fetchOptionsTask.isRunning}}
     @optionsComponent={{component "power-select/options"}}
     @search={{this.searchAndSuggest}}
